@@ -51,9 +51,9 @@ namespace Juce.Cheats.Installers
             removeWidgetUseCase.Execute(widgetInteractor);
         }
 
-        public void AddActionWidget(string actionName, Action action)
+        public IWidgetInteractor AddActionWidget(string actionName, Action action)
         {
-            addActionWidgetUseCase.Execute(actionName, action);
+            return addActionWidgetUseCase.Execute(actionName, action);
         }
     }
 }

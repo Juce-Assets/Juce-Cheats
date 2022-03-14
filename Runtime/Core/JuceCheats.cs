@@ -49,10 +49,10 @@ namespace Juce.Cheats.Core
             Instance.coreInteractor.RemoveWidget(widgetInteractor);
         }
 
-        public static void AddAction(string actionName, Action action)
+        public static IWidgetInteractor AddAction(string actionName, Action action)
         {
             Instance.InternalInit();
-            Instance.coreInteractor.AddActionWidget(actionName, action);
+            return Instance.coreInteractor.AddActionWidget(actionName, action);
         }
     }
 }
