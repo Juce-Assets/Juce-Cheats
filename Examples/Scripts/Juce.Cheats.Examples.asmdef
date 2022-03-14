@@ -1,0 +1,17 @@
+{
+    "name": "Juce.Cheats.Examples",
+    "rootNamespace": "",
+    "references": [
+        "GUID:8fd59553411af404aa14e6feea1d133e",
+        "GUID:9a64ff96d3b16d7498c8f46b660d81a0"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
