@@ -1,0 +1,17 @@
+{
+  "name": "com.juce.cheats",
+  "version": "0.0.1",
+  "displayName": "Juce-Cheats",
+  "description": "Juce Cheats",
+  "keywords": [
+    "Juce",
+    "Cheats"
+  ],
+  "author": {
+    "name": "Guillem Sunyer",
+    "email": "juce.unity@gmail.com",
+    "url": "https://github.com/Juce-Assets/Juce-Cheats"
+  },
+  "type": "template",
+  "hideInEditor": false
+}
