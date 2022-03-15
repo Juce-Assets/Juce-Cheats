@@ -22,5 +22,10 @@ namespace Juce.Cheats.WidgetsInteractors
         {
            
         }
+
+        public void Refresh()
+        {
+        
+        }
     }
 }

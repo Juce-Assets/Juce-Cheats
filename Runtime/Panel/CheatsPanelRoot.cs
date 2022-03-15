@@ -10,9 +10,11 @@ namespace Juce.Cheats.Panel
 
         [Header("Widgets")]
         [SerializeField] private ActionWidget actionWidget = default;
+        [SerializeField] private ToggleWidget toggleWidget = default;
 
         public Transform ContentParent => contentParent;
 
         public ActionWidget ActionWidget => actionWidget;
+        public ToggleWidget ToggleWidget => toggleWidget;
     }
 }

@@ -5,14 +5,14 @@ using Juce.Cheats.Widgets;
 using Juce.Cheats.WidgetsInteractors;
 using System;
 
-namespace Juce.Cheats.UseCases.AddActionWidget
+namespace Juce.Cheats.UseCases.AddToggleWidget
 {
-    public class AddActionWidgetUseCase : IAddActionWidgetUseCase
+    public class AddToggleWidgetUseCase : IAddToggleWidgetUseCase
     {
         private readonly ISingleRepository<CheatsPanelRoot> cheatsPanelRepository;
         private readonly IAddWidgetUseCase addWidgetUseCase;
 
-        public AddActionWidgetUseCase(
+        public AddToggleWidgetUseCase(
             ISingleRepository<CheatsPanelRoot> cheatsPanelRepository,
             IAddWidgetUseCase addWidgetUseCase
             )
@@ -21,7 +21,7 @@ namespace Juce.Cheats.UseCases.AddActionWidget
             this.addWidgetUseCase = addWidgetUseCase;
         }
 
-        public IWidgetInteractor Execute(string actionName, Action action)
+        public IWidgetInteractor Execute(string actionName, Func<bool> getAction, Action<bool> setAction)
         {
             bool found = cheatsPanelRepository.TryGet(out CheatsPanelRoot cheatsPanelRoot);
 
@@ -30,16 +30,17 @@ namespace Juce.Cheats.UseCases.AddActionWidget
                 return NopActionWidgetInteractor.Instance;
             }
 
-            ActionWidget actionWidget = UnityEngine.Object.Instantiate(
-                cheatsPanelRoot.ActionWidget,
+            ToggleWidget toggleWidget = UnityEngine.Object.Instantiate(
+                cheatsPanelRoot.ToggleWidget,
                 cheatsPanelRoot.ContentParent,
                 worldPositionStays: false
                 );
 
-            ActionWidgetInteractor interactor = new ActionWidgetInteractor(
-                actionWidget,
+            ToggleWidgetInteractor interactor = new ToggleWidgetInteractor(
+                toggleWidget,
                 actionName,
-                action
+                getAction,
+                setAction
                 );
 
             addWidgetUseCase.Execute(interactor);

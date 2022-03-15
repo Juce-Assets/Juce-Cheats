@@ -35,6 +35,11 @@ namespace Juce.Cheats.WidgetsInteractors
             actionWidget.Button.onClick.RemoveListener(OnButtonPressed);
         }
 
+        public void Refresh()
+        {
+
+        }
+
         private void OnButtonPressed()
         {
             action?.Invoke();

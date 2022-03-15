@@ -1,4 +1,6 @@
 ﻿using Juce.Cheats.UseCases.AddActionWidget;
+using Juce.Cheats.UseCases.AddToggleWidget;
+using Juce.Cheats.UseCases.RefreshAllWidgets;
 using Juce.Cheats.UseCases.RemoveWidget;
 using Juce.Cheats.UseCases.SetPanelVisible;
 using Juce.Cheats.UseCases.TogglePanelVisible;
@@ -15,13 +17,15 @@ namespace Juce.Cheats.Installers
         private readonly ITogglePanelVisibleUseCase togglePanelVisibleUseCase;
         private readonly IRemoveWidgetUseCase removeWidgetUseCase;
         private readonly IAddActionWidgetUseCase addActionWidgetUseCase;
+        private readonly IAddToggleWidgetUseCase addToggleWidgetUseCase;
 
         public CoreInteractor(
             ITrySpawnPanelPrefabUseCase trySpawnPanelPrefabUseCase,
             ISetPanelVisibleUseCase setPanelVisibleUseCase,
             ITogglePanelVisibleUseCase togglePanelVisibleUseCase,
             IRemoveWidgetUseCase removeWidgetUseCase,
-            IAddActionWidgetUseCase addActionWidgetUseCase
+            IAddActionWidgetUseCase addActionWidgetUseCase,
+            IAddToggleWidgetUseCase addToggleWidgetUseCase
             )
         {
             this.trySpawnPanelPrefabUseCase = trySpawnPanelPrefabUseCase;
@@ -29,6 +33,7 @@ namespace Juce.Cheats.Installers
             this.togglePanelVisibleUseCase = togglePanelVisibleUseCase;
             this.removeWidgetUseCase = removeWidgetUseCase;
             this.addActionWidgetUseCase = addActionWidgetUseCase;
+            this.addToggleWidgetUseCase = addToggleWidgetUseCase;
         }
 
         public void TrySpawnPanel()
@@ -54,6 +59,11 @@ namespace Juce.Cheats.Installers
         public IWidgetInteractor AddActionWidget(string actionName, Action action)
         {
             return addActionWidgetUseCase.Execute(actionName, action);
+        }
+
+        public IWidgetInteractor AddToggleWidget(string actionName, Func<bool> getAction, Action<bool> setAction)
+        {
+            return addToggleWidgetUseCase.Execute(actionName, getAction, setAction);
         }
     }
 }

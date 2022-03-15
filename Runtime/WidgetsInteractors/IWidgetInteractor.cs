@@ -8,5 +8,6 @@ namespace Juce.Cheats.WidgetsInteractors
 
         void Subscribe();
         void Unsubscribe();
+        void Refresh();
     }
 }

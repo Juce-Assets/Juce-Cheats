@@ -54,5 +54,11 @@ namespace Juce.Cheats.Core
             Instance.InternalInit();
             return Instance.coreInteractor.AddActionWidget(actionName, action);
         }
+
+        public static IWidgetInteractor AddToggle(string actionName, Func<bool> getAction, Action<bool> setAction)
+        {
+            Instance.InternalInit();
+            return Instance.coreInteractor.AddToggleWidget(actionName, getAction, setAction);
+        }
     }
 }

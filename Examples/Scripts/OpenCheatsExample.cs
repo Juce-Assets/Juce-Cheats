@@ -1,6 +1,4 @@
 using Juce.Cheats.Core;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class OpenCheatsExample : MonoBehaviour
@@ -18,6 +16,7 @@ public class OpenCheatsExample : MonoBehaviour
         {
             JuceCheats.Toggle();
             JuceCheats.AddAction("Action", () => { UnityEngine.Debug.Log("Pressed"); });
+            JuceCheats.AddToggle("Toggle", () => { return false; }, (bool enabled) => UnityEngine.Debug.Log(enabled));
         }
     }
 }

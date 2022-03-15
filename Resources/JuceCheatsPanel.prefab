@@ -100,7 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1353646529380160054}
   - component: {fileID: 3224586466889323065}
-  - component: {fileID: 2150710713366595443}
+  - component: {fileID: 76215166047921089}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
   m_VerticalFit: 2
---- !u!114 &2150710713366595443
+--- !u!114 &76215166047921089
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -150,21 +150,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 689499675331746765}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Script: {fileID: 11500000, guid: 2ab199fd3aef2c340b8e8cf7a9da7381, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 14
-    m_Right: 14
-    m_Top: 14
-    m_Bottom: 14
+    m_Left: 26
+    m_Right: 0
+    m_Top: 28
+    m_Bottom: 28
   m_ChildAlignment: 0
-  m_StartCorner: 0
-  m_StartAxis: 0
-  m_CellSize: {x: 193.3, y: 60}
-  m_Spacing: {x: 13, y: 13}
-  m_Constraint: 0
-  m_ConstraintCount: 2
+  ChildForceExpandHeight: 0
+  ChildForceExpandWidth: 0
+  Spacing: 20
 --- !u!1 &1591045918291656297
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,8 +381,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Juce cheats panel
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8b7553bfeafae5c4aa06138d8f838f8b, type: 2}
+  m_sharedMaterial: {fileID: -3911732502937084845, guid: 8b7553bfeafae5c4aa06138d8f838f8b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -675,6 +672,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contentParent: {fileID: 1353646529380160054}
   actionWidget: {fileID: 3312286657328511326, guid: 95ee2dc22224d7144bae172e97aeca46, type: 3}
+  toggleWidget: {fileID: 5019919394195232860, guid: 571081bb8035c444cb8bb3caf46b40de, type: 3}
 --- !u!1 &3366127594881886092
 GameObject:
   m_ObjectHideFlags: 0
@@ -817,7 +815,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
